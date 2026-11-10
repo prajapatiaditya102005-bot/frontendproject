@@ -1,0 +1,259 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* Header */
+
+.header {
+    background: #172554;
+    color: white;
+    padding: 18px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav h1 span {
+    color: #60a5fa;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+/* Hero */
+
+.hero {
+    background: linear-gradient(120deg, #1e3a8a, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 65px 15px;
+}
+
+.hero h2 {
+    font-size: clamp(26px, 4vw, 40px);
+    margin-bottom: 10px;
+}
+
+/* Internship Section */
+
+.board {
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+
+.board > h2 {
+    margin-bottom: 20px;
+}
+
+/* Filters */
+
+.filters {
+    display: flex;
+    gap: 15px;
+    align-items: end;
+    flex-wrap: wrap;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background: white;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+/* Cards */
+
+.internship-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+.company {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.domain {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 12px 0;
+}
+
+.details {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.apply-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #2563eb;
+    color: white;
+    padding: 9px 16px;
+    border-radius: 6px;
+}
+
+.apply-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Empty and error states */
+
+.message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 35px;
+    background: white;
+    border-radius: 10px;
+}
+
+.error {
+    color: #dc2626;
+}
+
+/* Footer */
+
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .internship-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 45px 10px;
+    }
+
+    .internship-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .filters button {
+        width: 100%;
+    }
+}

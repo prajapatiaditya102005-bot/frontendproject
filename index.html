@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Board</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav">
+            <h1>Intern<span>Board</span></h1>
+            <nav aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#internships">Internships</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="container">
+                <h2>Find Your Dream Internship</h2>
+                <p>Explore opportunities and start building your career.</p>
+            </div>
+        </section>
+
+        <section class="container board" id="internships">
+
+            <h2>Explore Internships</h2>
+
+            <form id="filterForm" class="filters" role="search">
+
+                <div class="form-group">
+                    <label for="search">Search internships</label>
+                    <input
+                        type="search"
+                        id="search"
+                        placeholder="Search by title or company..."
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="domain">Select Domain</label>
+                    <select id="domain">
+                        <option value="all">All Domains</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Python">Python</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                        <option value="Java">Java</option>
+                    </select>
+                </div>
+
+                <button type="reset" id="resetBtn">Reset Filters</button>
+
+            </form>
+
+            <p id="status" role="status" aria-live="polite"></p>
+
+            <div id="internshipList" class="internship-grid">
+                <!-- Internship cards added through JavaScript -->
+            </div>
+
+        </section>
+    </main>
+
+    <footer id="about">
+        <p>© 2026 InternBoard. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
